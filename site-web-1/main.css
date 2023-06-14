@@ -1,0 +1,160 @@
+:root {
+    --nav-border: .3rem solid #000000;
+}
+
+body {
+    padding: 4rem 10rem;
+}
+
+main {
+    padding: 1rem;
+    margin-block:   2rem;
+}
+
+/* barra de navegação --✀------------------------------------------------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: var(--nav-border);
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+}
+
+nav :is(ul,li) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.7rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav  li {
+    display: inline-block;
+    padding: .3rem;
+}
+
+nav li:has(ul)::after {
+    content: "!";
+}
+
+nav > ul > li {
+    padding: .5rem 1.5rem;
+    border: .2rem solid black;
+    background-color: red;
+    transition: .1s ease-in-out;
+}
+
+nav ul > li > ul {
+    border: .2rem solid black;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    background-color: black;
+    opacity: 0;
+}
+
+nav ul > li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+nav > ul > li:hover {
+    background-color: rgb(83, 146, 254);
+}
+
+nav > ul > li > ul > li:hover {
+    background-color: white;
+    color: black;
+}
+
+nav > ul > li > ul > li:hover > a {
+    background-color: white;
+    color: black;
+}
+
+nav div.logo {
+    background-color: red;
+    height: 5rem;
+    width: 5rem;
+    border: .3rem solid black;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    padding-left: 10rem;
+}
+
+/* galeria de fotos --✀------------------------------------------------------------- */
+
+div.galeria {
+    border: .3rem solid #000000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap: 2rem;
+    padding: 1rem;
+}
+  
+div.galeria > div {
+    background-color: lightgreen;
+    border: .3rem solid black;
+}
+  
+div.galeria > :nth-child(1) {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  
+    grid-row-start: 1;
+    grid-row-end: 3;
+  
+}
+
+div.galeria > :nth-child(2) {
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
+  
+    grid-row-start: 1;
+    grid-row-end: 2;
+  
+}
+
+div.galeria > :nth-child(3) {
+    background-color: red;
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
+  
+    grid-row-start: 2;
+    grid-row-end: 4;
+  
+}
+
+header.divisor {
+    background-color: red;
+    border: .3rem solid black;
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.divisor h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div > div > img {
+    height: 5rem;
+}
