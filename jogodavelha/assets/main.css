@@ -1,0 +1,88 @@
+:root {
+    --lilas: #d5dfff;
+    --roxo: rgb(135, 159, 213);
+}
+
+body {
+    background-color: #f8fdff;
+}
+
+* {
+    font-family: 'Silkscreen';
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2rem var(--lilas) solid;
+    height: 100vh;
+}
+
+main h1 {
+    font-size: 3rem;
+    color: var(--roxo);
+    margin-bottom: .5rem;
+}
+
+div#tela-escura h2 {
+    font-size: 2.5rem;
+}
+
+div#tela-escura h3 {
+    font-size: 2rem;
+}
+
+main div.tabela {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: .5rem;
+    padding: .5rem;
+}
+
+main div.tabela > div.espaco {
+    width: 15vmin;
+    height: 15vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--roxo);
+    background-color: var(--lilas);
+    border: .3rem var(--roxo) solid;
+}
+
+div#tela-escura {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 10, 32);
+    text-align: center;
+    color: var(--lilas);
+    opacity: 0.95;
+    visibility: hidden;
+}
+
+hr {
+    height: 4px;
+    width: 25%;
+    font-weight: bold;
+    background: var(--roxo);
+    margin-bottom: 10px;
+}
+
+main span {
+    margin-top: .9rem;
+    color: var(--roxo);
+    font-size: 1.5rem;
+}
