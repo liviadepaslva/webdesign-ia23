@@ -1,0 +1,351 @@
+@import url(menu-hamburguer.css);
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --background-color: rgb(255, 255, 255);
+    --text-color: rgb(14, 1, 1);
+    --section-break-text: rgb(24, 1, 1);
+    --section-break-bg: rgb(255, 145, 0);
+    --img-text: rgb(14, 1, 1);
+    --img-background: rgba(255, 233, 192, 0.49);
+}
+
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+header {
+    height: 18dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Silkscreen';
+    color: var(--text-color);
+}
+
+section#start-section {
+    background-color: rgb(101, 188, 188);
+    background-image: url(../imgs/mangacover-main.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70dvh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+section#start-section .buttons {
+    position: absolute;
+    bottom: 15%;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+section#start-section .buttons button {
+    padding: 1rem 2rem;
+    font-family: 'Silkscreen';
+    font-size: 1.5rem;
+    border-radius: 15px;
+    color: var(--text-color);
+    border: .15rem solid var(--text-color);
+    background-color: var(--background-color);
+    transition: .3s;
+    box-shadow: 5px 3px 3px rgba(37, 1, 1, 0.499);
+    
+    &:hover {
+        scale: 1.2;
+        cursor: pointer;
+        background: var(--section-break-bg);
+    }
+}
+
+/* -- quebra ---------------✀----------------- */
+
+div.section-break {
+    height: 12dvh;
+    background-color: var(--section-break-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(37, 1, 1, 0.586);
+}
+
+div.section-break span {
+    font-size: 1.5rem;
+    font-family: 'Silkscreen';
+    color: var(--section-break-text);
+}
+
+/* -- seções da página ---------------✀----------------- */
+section {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+section > div.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+section > div.display > a {
+    position: relative;
+    color: var(--img-text);
+}
+
+section > div.display > a div {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--img-background);
+    opacity: 0;
+    transition: .3s;
+    padding: 1rem;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+section > div.display > a div span {
+    font-size: 1.3rem;
+    transition: .3s;
+    font-family: 'Silkscreen';
+    text-align: center;
+}
+
+section > div.display img {
+    height: 27vmin;
+}
+
+section > div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section > div.container p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 10px;
+    color: var(--text-color);
+}
+
+section > div.container > img {
+    width: 80%;
+}
+
+section .container > a {
+    text-decoration: none;
+    padding: .9rem;
+    margin-top: .7rem;
+    background-color: var(--section-break-bg);
+    border: 3px solid var(--img-text);
+    color: var(--text-color);
+    border-radius: 15px;
+    transition: .3s;
+    cursor: pointer;
+    font-family: 'Silkscreen';
+    text-align: center;
+
+    &:hover {
+        background-color: rgb(247, 78, 137);
+        transform: scaleX(1.1);
+    }
+}
+
+/* --rodapé ---------------✀----------------- */
+
+footer {
+    margin-top: 2rem;
+    width: 100%;
+    height: 300px;
+    background-color: var(--section-break-bg);
+    box-shadow: 0px -5px 8px rgba(37, 1, 1, 0.499);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+footer * {
+    font-family: 'Silkscreen';
+}
+
+footer address {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+footer img {
+    height: 200px;
+}
+
+
+/*topodesecoes*/
+
+div.section-top {
+    width: 100%;
+}
+
+div.section-top hr {
+    height: 5px;
+    background-color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+div.section-top h2 {
+    font-family: 'Silkscreen';
+    color: var(--text-color);
+}
+
+/*dialog*/
+
+dialog#trailer {
+    background-color: var(--background-color);
+    z-index: 5;
+    box-shadow: 5px 3px 3px rgba(37, 1, 1, 0.499);
+    border: 3px solid var(--section-break-text);
+}
+
+dialog#trailer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+dialog#trailer form div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 90%;
+}
+
+dialog#trailer form div button {
+    padding: .5rem .7rem ;
+    border-radius: 10px;
+}
+
+dialog#trailer form :is(h1, button, a) {
+    margin: 0;
+    font-family: 'Silkscreen';
+    color: var(--section-break-text);
+    text-decoration: none;
+}
+
+dialog#trailer form hr {
+    height: 5px;
+    width: 100%;
+    background-color: var(--section-break-text);
+}
+
+dialog#trailer form :is(a, button){
+    padding: .9rem;
+    margin-top: .7rem;
+    background-color: var(--section-break-bg);
+    border: 3px solid var(--img-text);
+    border-radius: 15px;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(247, 78, 137);
+        scale: 1.2;
+    }
+}
+
+dialog#trailer form img {
+    height: 45vmin;
+    border-radius: 15px;
+}
+
+dialog:modal {
+    --alt-color: #dcdcdc; 
+    border: 3px solid rgb(30, 1, 1);
+    background-color: rgba(27, 1, 1, 0.5);
+    backdrop-filter: blur(2.5px);
+    color: var(--alt-color);
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+
+dialog:modal h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Silkscreen';
+}
+dialog:modal p {
+    font-family: 'Silkscreen';
+}
+
+dialog:modal button {
+    border: 3px solid var(--alt-color);
+    background-color: transparent;
+    font-family: 'Silkscreen';
+    font-size: 1.4rem;
+    color: var(--alt-color);
+    padding: .5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--section-break-bg);
+        z-index: -1;
+        transform: translateY(100%);
+        transition: .3s;
+    }
+
+    &:focus,
+    &:hover {
+        &::before {
+            transform: translateY(0%);
+        }   
+    }
+}
+
+dialog:modal .action {
+    display: flex;
+    justify-content: flex-end;
+    gap: .25rem
+}
+
+dialog:modal::backdrop {
+    backdrop-filter: blur(4px);
+}

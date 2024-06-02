@@ -1,0 +1,88 @@
+/* cores uwu --✀------------------------------------------------------------ */
+@import url(profile.css);
+
+body {
+    background-image: url('../imgs/tailsbg.jpg');
+}
+
+header {
+    background-color: var(--branco);
+}
+
+header .hidden,
+header .bio {
+    background-color: var(--branco);
+}
+
+nav {
+    background-color: var(--branco);
+}
+
+main {
+    border: .4rem var(--branco) solid;
+}
+
+
+main > div.container {
+    background-color: var(--branco);
+}
+
+main > div.imagens {
+    background-color: var(--branco);
+}
+
+/*cor itens lista do nav --✀---------------------------*/
+
+nav > ul > li,
+nav > ul > li > a {
+    color: var(--amarelo);
+}
+
+nav > ul > li:hover {
+    border-color: var(--amarelo);
+}
+
+nav li > ul > li {
+    background-color: var(--branco);
+    border-color: var(--amarelo) ;
+    color: var(--amarelo);
+}
+
+nav li > ul > li > a {
+    color: var(--amarelo);
+}
+
+nav li > ul > li:hover {
+    background-color: var(--amarelo);
+    border-color: var(--amarelo);
+}
+
+/*cor das seções --✀---------------------------*/
+
+div.container > section > .section-top h1 {
+    color: rgb(244, 179, 67);
+}
+
+div.container > section > .section-top {
+    border-color: rgb(244, 179, 67);
+}
+
+div.container > section p {
+    color: rgb(0, 0, 0);
+}
+
+div.container > section > .section-top button {
+    background-color: var(--amarelo);
+}
+
+div.container > section:nth-child(2n) > .section-top h1 {
+    color: rgb(98, 169, 239);
+}
+
+div.container > section:nth-child(2n) > .section-top {
+    border-color: rgb(98, 169, 239);
+}
+
+div.container > section:nth-child(2n) > .section-top button {
+    background-color: rgb(90, 135, 240);
+}

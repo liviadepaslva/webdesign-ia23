@@ -1,0 +1,218 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+}
+
+nav > ul > li {
+    margin: 0 5px;
+}
+
+nav :is(ul, li) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+nav li > ul {
+    position: absolute;
+    left: -5%;
+    top: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    padding: 4px;
+    transition: 0.1s;
+}
+
+nav li > ul > li:hover {
+    transform: scale(1.1);
+}
+
+nav li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+ul li:hover {
+    cursor: pointer;
+    transform: translate(0, -6px);
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+}
+
+nav li > img.pixel-icon {
+    height: 2rem;
+}
+
+nav li:has(ul)::after {
+    content: "!";
+}
+
+nav > a {
+    position: relative;
+}
+
+nav > a > img {
+    height: 2.8rem;
+}
+
+nav > a > img:nth-child(2) {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.sega-on {
+    animation: logo-sega .3s;
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes logo-sega {
+    0%, 95% {
+        opacity: 0;
+        visibility: hidden;
+    } 
+
+    40%, 80% {
+        visibility: visible;
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+nav :is(li, a) {
+    font-family: 'Silkscreen', Tahoma;
+}
+
+a.home {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    margin: 0.2rem 3rem;
+}
+
+a.home > img {
+    position: relative;
+    right: 0;
+    height: 90px;
+    transition: 0.1s;
+    z-index: 2;
+}
+
+a.home:hover > img{
+    right: 60%;
+}
+
+a.home > div.hidden {
+    padding: 0.3rem 0.7rem;
+    font-family: 'Silkscreen', sans-serif;
+    position: absolute;
+    visibility: hidden;
+    text-align: right;
+    width: 12ch;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+a.home:hover > div.hidden {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* barra de navegação - lista de personagens --✀--------------------------- */
+
+nav li.personagens > ul > li.shadow,
+nav li.personagens > ul > li.shadow > a {
+    border-color: var(--vermelho-escuro);
+    color: var(--vermelho-escuro);
+}
+
+nav li.personagens > ul > li.shadow:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+nav li.personagens > ul > li.knuckles,
+nav li.personagens > ul > li.knuckles > a {
+    border-color: var(--vermelho);
+    color: var(--vermelho);
+}
+
+nav li.personagens > ul > li.knuckles:hover {
+    background-color: var(--vermelho);
+}
+
+
+nav li.personagens > ul > li.rouge,
+nav li.personagens > ul > li.rouge > a {
+    border-color: var(--carmesim);
+    color: var(--carmesim);
+}
+
+nav li.personagens > ul > li.rouge:hover {
+    background-color: var(--carmesim);
+}
+
+nav li.personagens > ul > li.amyrose,
+nav li.personagens > ul > li.amyrose > a {
+    border-color: var(--rosa);
+    color: var(--rosa);
+}
+
+nav li.personagens > ul > li.amyrose:hover {
+    background-color: var(--rosa);
+}
+
+nav li.personagens > ul > li.tails,
+nav li.personagens > ul > li.tails > a {
+    border-color: var(--amarelo);
+    color: var(--amarelo);
+}
+
+nav li.personagens > ul > li.tails:hover {
+    background-color: var(--amarelo);
+}
+
+nav li.personagens > ul > li.sonic,
+nav li.personagens > ul > li.sonic > a {
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+nav li.personagens > ul > li.sonic:hover {
+    background-color: var(--azul);
+}
+
+nav li.personagens > ul > li:hover > a {
+    color: var(--branco);
+}
+
+
+nav li.personagens img {
+    height: 2rem;
+}

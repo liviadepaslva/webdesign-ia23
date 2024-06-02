@@ -1,0 +1,278 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* modal -------✀------------------------------------------------------------- */
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .window {
+    position: relative;
+    background-color: #ffffff;
+    height: 65vmin;
+    width: 70vmin;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.5rem;
+    border-radius: 25px;
+}
+
+.modal .window .close {
+    position: absolute;
+    background-color:#e62c2e;
+    right: -.7rem;
+    top: -.7rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modal .window .content {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-grow: 1;
+}
+
+.modal .window .content p,
+.modal .window .content h1 {
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+}
+
+.modal .window .content p {
+    font-size: 1.3rem;
+}
+
+.modal .window .actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal .window .actions button {
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    background-color:#e62c2e;
+    padding: .5rem;
+    border: 1px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.modal.opened {
+    visibility: visible;
+    opacity: 1;
+}
+
+button.show > span {
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.7rem;
+    color: rgb(0, 7, 12);
+}
+
+button.show:hover > span {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* título da página --✀------------------------------------------------------------- */
+
+header {
+    width: 70%;
+    background-color: rgb(253, 254, 255);
+    animation: box-shadow-yay 5s infinite;
+    border-radius: 25px;
+    margin: 5rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(209, 128, 238);
+    animation: cor-da-fonte-yay 5s infinite;
+}
+
+@keyframes cor-da-fonte-yay {
+    0%, 100% {
+        color: #e62c2e;
+    }
+
+    25% {
+        color: #385bae;
+    }
+
+    50% {
+        color: #6acdb1;
+    }
+
+    75% {
+        color: #f6ca11;
+    }
+}
+
+/* galeria de fotos --✀------------------------------------------------------------- */
+
+div.galeria {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 5rem;
+    border-radius: 25px;
+    box-shadow: 5px 9px rgba(141, 1, 176, 0.5);
+    background-color: rgb(253, 254, 255);
+    animation: box-shadow-yay 5s infinite;
+}
+
+@keyframes box-shadow-yay {
+    0%, 100% {
+        box-shadow: 5px 9px rgba(230, 44, 47, 0.5);
+    }
+
+    25% {
+        box-shadow: 5px 9px rgba(56, 91, 174, 0.5);
+    }
+
+    50% {
+        box-shadow: 5px 9px rgba(106, 205, 177, 0.5);
+    }
+
+    75% {
+        box-shadow: 5px 9px rgba(246, 200, 17, 0.5);
+    }
+}
+  
+div.galeria > div,
+div.galeria > button {
+    border-radius: 25px;
+    animation: box-shadow-yay 5s infinite;
+    border: 2px solid black;
+}
+  
+div.galeria > :nth-child(1) {
+
+    background-image: url('../imgs/teamsonicbg.webp');
+    background-size: cover;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+  
+    grid-row-start: 1;
+    grid-row-end: 3;
+  
+    background-position: left;
+    transition: 1s;
+}
+
+div.galeria > :nth-child(1):hover {
+    background-position: right;
+    cursor: pointer;
+}
+
+div.galeria > :nth-child(2) {
+    background-color: rgb(247, 175, 8);
+
+    background-image: url('../imgs/tails-dance.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+  
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+    transition: background-color .5s;
+}
+
+div.galeria > :nth-child(2):hover {
+    background-image: url('../imgs/sonic-fortnitedance.gif');
+    background-color: #006cba;
+    background-size: 25%;
+}
+
+div.galeria > :nth-child(3) {
+    background-image: url('../imgs/sa2-game.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
+  
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    animation: fundo-yay 5s infinite, box-shadow-yay 5s infinite;
+}
+
+@keyframes fundo-yay {
+    0%, 100% {
+        background-color: #e62c2e;
+    }
+
+    25% {
+        background-color: #385bae;
+    }
+
+    50% {
+        background-color: #6acdb1;
+    }
+
+    75% {
+        background-color: #f6ca11;
+    }
+}
+
+div.galeria > :nth-child(4) {
+    background-image: url('../imgs/shadowracing.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #e62c2e;
+}
+
+div.galeria > :nth-child(5) {
+    background-image: url('../imgs/tails-winning.gif');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    /* background-color: #6acdb1; */
+    animation: fundo-tails 7.9s infinite, box-shadow-yay 5s infinite;
+}
+
+@keyframes fundo-tails {
+    0%, 25% {
+        background-color: #6acdb1;
+    }
+
+    29%, 100% {
+        background-color: #f6ca11;
+    }
+}
+

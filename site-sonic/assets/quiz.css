@@ -1,0 +1,160 @@
+body {
+    background-image: url('../imgs/sonicmania-background.png');
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fundo-body 5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fundo-body {
+    0%, 100% {
+        background-color: #e62c2e;
+    }
+
+    25% {
+        background-color: #385bae;
+    }
+
+    50% {
+        background-color: #6acdb1;
+    }
+
+    75% {
+        background-color: #f6ca11;
+    }
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 105vmin;
+    
+    padding: 2rem;
+    background: radial-gradient(circle, rgba(246,202,17,1), rgba(246,202,17,1) 25%, rgba(246,190,17,1) 45%, rgb(246, 177, 17));
+    border: .3rem solid #e62c2e;
+    transition: .1s;
+    border-radius: 45px;
+}
+
+h1.pergunta {
+    font-family: 'Silkscreen';
+    font-size: 1.8rem;
+    letter-spacing: -2px;
+    margin: 2.5rem 0;
+    text-align: justify;
+    color: #05143a;
+}
+
+div.alternativas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 110px);
+    gap: 1.5rem;
+}
+
+div.alternativas > button {
+    background: linear-gradient(to bottom, #6acdb1, #385bae);
+    padding: .5em 1em;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    border: .2rem solid #385cae;
+    transition: .2s;
+    font-family: 'Silkscreen';
+    border-radius: 20px;
+    color: #05143a;
+}
+
+div.alternativas > button:hover {
+    transform: translate(0, -0.5rem);
+    box-shadow: 5px 9px #e62c2e;
+    cursor: pointer;
+}
+
+div.alternativas > button:hover::after {
+    content: " (?)";
+}
+
+div.pontuacao {
+    padding: .2em;
+    align-self: flex-start;
+    text-shadow: 0 0 2px #e62c2f;
+    font-size: 1.2rem;
+    color: #05143a;
+}
+
+div.pontuacao,
+h1.pontuacaofinal {
+    letter-spacing: 2px;
+    font-family: 'Silkscreen';
+}
+
+/* tabela de acertos após o término do quiz */
+
+div.cabouquiz {
+    position: absolute;
+    width: 65vmin;
+    min-height: 60vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(56, 91, 174, 0.6);
+    border: .3rem solid #f6ca11;
+    visibility: hidden;
+    opacity: 0;
+    transition: .1s;
+    border-radius: 45px;
+}
+
+div.cabouquiz > img {
+    filter: drop-shadow(15px 0px #f6ca11);
+    margin: 1rem 0;
+}
+
+h1.pontuacaofinal {
+    margin: 0;
+    font-size: 2rem;
+    color: #f6e311;
+    text-shadow: 2px 2px #e62c2e;
+}  
+
+button#restart {
+    background: linear-gradient(to bottom, #f6ca11, #f6a211);
+    border: .2rem solid #f6a211;
+    padding: 1rem 2rem;
+    border-radius: 45px;
+    font-family: 'Silkscreen';
+    font-size: 1.2rem;
+    color: #05143a;
+    box-shadow: 7px 7px #e62c2e;
+    transition: .2s;
+}
+
+button#restart:hover {
+    box-shadow: 7px 7px #6acdb1;
+    transform: translate(0, -0.5rem);
+    cursor: pointer;
+}
+
+/* classes de fim */
+
+div.cabouquiz.fim {
+    opacity: 1;
+    visibility: visible;
+}
+
+main.quiz.fim {
+    opacity: 0;
+    visibility: hidden;
+}

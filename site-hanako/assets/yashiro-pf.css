@@ -1,0 +1,81 @@
+@import url(profile.css);
+
+:root {
+    --background-color: rgb(252, 241, 244);
+    --text-color: rgb(48, 5, 36);
+    --section-break-text: rgb(24, 1, 1);
+    --section-break-bg: rgb(234, 123, 171);
+    --section-n1: rgb(243, 181, 219);
+    --section-n2: rgb(236, 132, 172);
+}
+
+body {
+    background-image: url('../imgs/nene-bg.jpg');
+}
+
+header {
+    background-color: var(--background-color);
+}
+
+header article {
+    color: var(--text-color);
+}
+
+header img.profile {
+    border-color: var(--background-color);
+}
+
+nav {
+    background-color: var(--background-color);
+}
+
+main {
+    box-sizing: border-box;
+    border: .8rem var(--background-color) solid;
+}
+
+
+main > div.container {
+    background-color: var(--background-color);
+}
+
+main > div.imagens {
+    background-color: var(--background-color);
+    border-color: var(--background-color);
+}
+
+main > div.imagens > span {
+    color: rgb(239, 108, 108);
+    font-size: 1.5rem;
+}
+
+div.container > section > .section-top h1 {
+    color: var(--section-n1);
+}
+
+div.container > section > .section-top {
+    border-color: var(--section-n1);
+}
+
+div.container > section p {
+    color: var(--text-color);
+}
+
+div.container > section > .section-top button {
+    background-color: var(--background-color);
+    border-color: var(--section-n1);
+    color: var(--section-n1)
+}
+
+div.container > section:nth-child(2n) > .section-top h1 {
+    color: var(--section-n2);
+}
+
+div.container > section:nth-child(2n) > .section-top {
+    border-color: var(--section-n2);
+}
+
+div.container > section:nth-child(2n) > .section-top button {
+    border-color: var(--section-n2);
+    color: var(--section-n2)
+}

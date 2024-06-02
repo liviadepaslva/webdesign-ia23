@@ -1,0 +1,185 @@
+@import url(menu-hamburguer.css);
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+/* -- cabeçalho ---------------✀----------------- */
+
+header {
+    position: relative;
+    top: 6rem;
+    width: 100%;
+    height: 20vmin;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+header > img.profile {
+    position: absolute;
+    left: 13%;
+    scale: 150%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 2;
+    border: 5px solid;
+}
+
+header > article {
+    position: absolute;
+    left: 27%;
+    width: 63ch;
+    font-family: 'Silkscreen', 'Noto Sans JP', sans-serif;
+    text-align: justify;
+}
+
+/* --main e display de imagens ---------------✀----------------- */
+main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    box-sizing: border-box;
+    margin: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+    background: transparent;
+}
+
+main > div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+main > div.container > p {
+    padding: 2rem;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+main > div.imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-left: 10px solid;
+}
+
+main > div.imagens > img {
+    width: 100%;
+}
+
+main > div.imagens > span {
+    color: var(--text-color);
+}
+
+/* Seções */
+div.container > section {
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    padding: .1rem 1.5rem;
+}
+
+div.container > section:first-of-type {
+    padding: 2rem 1.5rem 0 1.5rem;
+}
+
+div.container > section:last-of-type {
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+
+div.container > section > .section-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem;
+    border-bottom: 4px solid;
+}
+
+div.container > section > .section-top button {
+    width: 2.5rem;
+    height: 2.5rem;
+    box-shadow: 2px 2px 5px rgba(34, 0, 34, 0.44);
+    border-radius: 10px;
+    font-family: 'Silkscreen';
+    font-size: 1.3rem;
+    padding: .3rem .5rem;
+    border: 3px solid;
+    cursor: pointer;
+}
+
+div.container > section h1 {
+    margin: 0;
+    margin-right: 2rem;
+    font-family: 'Silkscreen';
+    font-size: 1.7rem;
+}
+
+div.container > section p {
+    margin: 0;
+    padding: 0 .5rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+div.container > section > .content {
+    padding: 1.3rem 0;
+}
+
+div.container > section > .content.hidden {
+    display: none;
+}
+
+/* ------- rodapé ---------------✀----------------- */
+
+footer {
+    margin-top: 2rem;
+    width: 100%;
+    height: 300px;
+    background-color: var(--section-break-bg);
+    box-shadow: 0px -5px 8px rgba(37, 1, 1, 0.499);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+footer * {
+    font-family: 'Silkscreen';
+}
+
+footer address {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+footer img {
+    height: 200px;
+}

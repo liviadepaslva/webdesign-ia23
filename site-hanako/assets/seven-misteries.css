@@ -1,0 +1,256 @@
+@import url(menu-hamburguer.css);
+
+:root {
+    --background-color: rgb(254, 250, 241);
+    --text-color: rgb(29, 2, 2);
+    --section-break-text: rgb(24, 1, 1);
+    --section-break-bg: rgb(238, 132, 26);
+    --section-n1: rgb(209, 79, 9);
+    --section-n2: rgb(211, 48, 19);
+}
+
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imgs/seven-misteries-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+h1{
+    width: 60%;
+    text-align: center;
+    font-family: 'Silkscreen';
+    background-color: var(--background-color);
+    border: 3px solid var(--text-color);
+    border-radius: 15px;
+    padding: .7rem .6rem;
+    box-shadow: 5px 3px 3px rgba(45, 7, 7, 0.3);
+}
+/* ------- painel ---------------✀----------------- */
+.seven-mysteries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seven-mysteries > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    text-decoration: none;
+    
+    &:hover img {
+        scale: 1.1;
+    }
+}
+
+.seven-mysteries > a span {
+    margin-top: 3rem;
+    width: 100%;
+    background-color: var(--background-color);
+    border: 3px solid rgb(188, 14, 14);
+    border-radius: 10px;
+    padding: .7rem;
+    box-shadow: 5px 3px 3px rgba(45, 7, 7, 0.3);
+    text-align: center;
+    font-family: 'Silkscreen';
+    font-size: 1.6rem;
+    color: rgb(188, 14, 14);
+}
+
+.seven-mysteries > a img {
+    height: 50vmin;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(6, 32vmin);
+}
+
+.seven-mysteries .image-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 32vmin;
+
+    &:hover img {
+        transform: translateY(2.5rem);
+    }
+}
+.seven-
+mysteries .image-container a img {
+    width: 32vmin;
+    transition: .3s;
+}
+
+.seven-mysteries .image-container a span {
+    margin-top: 3rem;
+    width: 80%;
+    background-color: var(--background-color);
+    border: 3px solid rgb(30, 113, 186);
+    border-radius: 10px;
+    padding: .5rem;
+    box-shadow: 5px 3px 3px rgba(45, 7, 7, 0.3);
+    text-align: center;
+    font-family: 'Silkscreen';
+    color: rgb(30, 113, 186);
+}
+
+.seven-mysteries .image-container a:nth-child(2) span {
+    border-color: rgb(228, 73, 25);
+    color: rgb(228, 73, 25);
+}
+
+.seven-mysteries .image-container a:nth-child(3) span {
+    border-color: rgb(226, 42, 115);
+    color: rgb(226, 42, 115);
+}
+
+.seven-mysteries .image-container a:nth-child(4) span {
+    border-color: rgb(44, 178, 191);
+    color: rgb(44, 178, 191);
+}
+
+.seven-mysteries .image-container a:nth-child(5) span {
+    border-color: rgb(116, 45, 155);
+    color: rgb(116, 45, 155);
+}
+
+.seven-mysteries .image-container a:nth-child(6) span {
+    border-color: rgb(183, 96, 200);
+    color: rgb(183, 96, 200);
+}
+
+
+/* ------- conteúdo ---------------✀----------------- */
+
+main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    background-color: var(--background-color);
+    margin-top: 10rem;
+    width: 100%;
+    height: 20vmin;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+header > img.profile {
+    position: absolute;
+    left: 13%;
+    scale: 150%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 2;
+    border: 5px solid var(--background-color);
+}
+
+header > article {
+    position: absolute;
+    left: 27%;
+    width: 63ch;
+    font-family: 'Silkscreen', 'Noto Sans JP', sans-serif;
+    text-align: justify;
+    color: var(--text-color);
+}
+.seven-mysteries .image-container a img {
+    width: 32vmin;
+    transition: .3s;
+}
+
+main > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    margin: 5rem 0;
+    width: 80%;
+    padding: 1rem;
+}
+
+main > section > .section-top {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem;
+    border-bottom: 4px solid var(--section-n1);
+}
+
+section > .section-top h2 {
+    margin: 0;
+    margin-right: 2rem;
+    font-family: 'Silkscreen';
+    font-size: 1.7rem;
+    color: var(--section-n1);
+}
+
+section > article.content {
+    width: 90%;
+}
+
+main > section p {
+    margin-top: .3rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: .5rem;
+    font-family: 'Silkscreen';
+}
+
+footer {
+    margin-top: 2rem;
+    width: 100%;
+    height: 300px;
+    background-color: var(--section-break-bg);
+    box-shadow: 0px -5px 8px rgba(37, 1, 1, 0.499);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+/* ------- rodapé ---------------✀----------------- */
+
+footer * {
+    font-family: 'Silkscreen';
+}
+
+footer address {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+footer img {
+    height: 200px;
+}

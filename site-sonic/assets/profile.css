@@ -1,0 +1,232 @@
+@import url(navbar.css);
+
+:root {
+    --vermelho: #da0f0f;
+    --vermelho-escuro: rgb(161, 2, 26);
+    --carmesim: #d65172;
+    --rosa: #ed85bb;
+    --azul: #006cba;
+    --amarelo: #fa9500;
+    --branco: rgb(247, 253, 253);
+    --lilas: #d5dfff;
+    --preto-fundo: #00000d;
+}
+
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* barra de navegação --✀------------------------------------------------------------ */
+nav {
+    position: fixed;
+    left: 0;
+    z-index: 2;
+    width: 60%;
+}
+nav > ul > li {
+    border: .2rem transparent dashed;
+    padding: .3rem .5rem;
+    margin: .3rem;
+}
+
+nav li > ul > li {
+    border: .2rem solid transparent;
+    padding: .3rem .5rem;
+    width: 90%;
+    z-index: 1;
+}
+
+nav li > ul > li:hover {
+    color: var(--branco);
+    z-index: 2;
+}
+
+nav li > ul > li:hover > a {
+    color: var(--branco);
+}
+
+a.home {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+a.home > div.hidden {
+    background-color: var(--amarelo);
+}
+
+/* cabeçalho --✀--------------------------------------------------------------------- */
+header {
+    position: relative;
+    top: 9rem;
+    width: 100%;
+    height: 20vmin;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+header > img.profile {
+    position: relative;
+    left: 10%;
+    scale: 130%;
+    height: 100%;
+    border-radius: 50%;
+    transition: .4s ease-in;
+    z-index: 2;
+}
+
+header:hover > img.profile {
+    transform: rotate(360deg);
+    left: 75%;
+}
+
+header > .bio {
+    position: relative;
+    left: 15%;
+    width: 63ch;
+    font-family: 'Silkscreen',  'Noto Sans JP', sans-serif;
+    transition: .2s ease-in-out;
+    text-align: justify;
+    z-index: 1;
+}
+
+header:hover > .bio {
+    visibility: hidden;
+    opacity: 0;
+}
+
+header > .hidden {
+    position: absolute;
+    left: 20%;
+    width: 57ch;
+    text-align: justify;
+    visibility: hidden;
+    opacity: 0;
+    font-family: 'Silkscreen',  'Noto Sans JP', sans-serif;
+    transition: .2s ease-in-out;
+    z-index: 1;
+}
+
+header > img.hiddengif {
+    position: absolute;
+    left: 10%;
+    height: 70%;
+}
+
+header:hover > .hidden {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* main e imagens --✀--------------------------------------------------------------------- */
+main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    box-sizing: border-box;
+    margin: 5rem;
+    margin-top: 13rem;
+    margin-bottom: 40rem;
+    background: transparent;
+}
+
+main > div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    
+}
+
+main > div.container > p {
+    padding: 2rem;
+    text-align: justify;
+    font-family: 'VT323', sans-serif;
+    font-size: 1.5rem;
+}
+
+main > div.imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+main > div.imagens > img {
+    width: 100%;
+}
+
+/* secões --✀--------------------------------------------------------------------- */
+
+div.container > section {
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    padding: .1rem 1.5rem;
+}
+
+div.container > section:first-of-type {
+    padding:  2rem 1.5rem 0 1.5rem;
+}
+
+div.container > section:last-of-type {
+    padding:  0 1.5rem  2rem 1.5rem;
+}
+
+div.container > section > .section-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem;
+    border: 4px solid;
+    border-left: 0;
+    border-right: 0;
+}
+
+div.container > section > .section-top button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(34, 0, 34, 0.44);
+    border-radius: 10px;
+    font-family: 'VT323';
+    font-size: 1.3rem;
+}
+
+div.container > section h1 {
+    margin: 0;
+    margin-right: 2rem;
+    font-family: 'Silkscreen';
+    font-size: 1.7rem;
+}
+
+div.container > section p {
+    margin: 0;
+    padding: 0 .5rem;
+    font-family: 'VT323';
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+div.container > section > .content {
+    padding: 1.3rem 0;
+}
+
+div.container > section > .content.hidden {
+    display: none;
+}
+
+div.container > section button {
+    color: var(--branco);
+}

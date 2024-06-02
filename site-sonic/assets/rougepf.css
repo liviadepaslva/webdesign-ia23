@@ -1,0 +1,92 @@
+/* cores uwu --✀------------------------------------------------------------ */
+@import url(profile.css);
+
+body {
+    background-image: url('../imgs/rougebg.jpg');
+}
+
+header {
+    background-color: rgb(28, 11, 36);
+}
+
+header .hidden,
+header .bio {
+    color: rgb(224, 242, 249);
+}
+
+nav {
+    background-color: rgb(28, 11, 36);
+}
+
+main {
+    border: .4rem rgb(28, 11, 36) solid;
+}
+
+
+main > div.container {
+    background-color: rgb(28, 11, 36);
+}
+
+main > div.imagens {
+    background: linear-gradient(to bottom, rgb(232, 145, 219), rgb(234, 74, 167) 50% ,rgb(221, 40, 152));
+}
+
+main > div.imagens > :last-child {
+    background-color: white;
+}
+
+/*cor itens lista do nav --✀---------------------------*/
+
+nav > ul > li,
+nav > ul > li > a {
+    color: var(--carmesim);
+}
+
+nav > ul > li:hover {
+    border-color: var(--carmesim);
+}
+
+nav li > ul > li {
+    background-color: rgb(51, 21, 65);
+    border-color: var(--carmesim) ;
+    color: var(--carmesim);
+}
+
+nav li > ul > li > a {
+    color: var(--carmesim);
+}
+
+nav li > ul > li:hover {
+    background-color: var(--carmesim);
+    border-color: var(--carmesim);
+}
+
+/*cor das seções --✀---------------------------*/
+
+div.container > section > .section-top h1 {
+    color: var(--carmesim);
+}
+
+div.container > section > .section-top {
+    border-color: var(--carmesim);
+}
+
+div.container > section p {
+    color: rgb(224, 242, 249);
+}
+
+div.container > section > .section-top button {
+    background-color: var(--carmesim);
+}
+
+div.container > section:nth-child(2n) > .section-top h1 {
+    color: rgb(237, 127, 191);
+}
+
+div.container > section:nth-child(2n) > .section-top {
+    border-color: rgb(237, 127, 191);
+}
+
+div.container > section:nth-child(2n) > .section-top button {
+    background-color: rgb(237, 127, 191);
+}

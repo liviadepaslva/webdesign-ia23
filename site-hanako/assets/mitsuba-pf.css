@@ -1,0 +1,82 @@
+/* cores uwu --✀------------------------------------------------------------ */
+@import url(profile.css);
+
+:root {
+    --background-color: rgb(252, 241, 244);
+    --text-color: rgb(29, 2, 2);
+    --section-break-text: rgb(24, 1, 1);
+    --section-break-bg: rgb(226, 35, 118);
+    --section-n1: rgb(247, 177, 72);
+    --section-n2: rgb(233, 84, 141);
+}
+
+body {
+    background-image: url('../imgs/mitsuba-bg.jpg');
+}
+
+header {
+    background-color: var(--background-color);
+}
+
+header article {
+    color: var(--text-color);
+}
+
+header img.profile {
+    border-color: var(--background-color);
+}
+
+nav {
+    background-color: var(--background-color);
+}
+
+main {
+    box-sizing: border-box;
+    border: .8rem var(--background-color) solid;
+}
+
+
+main > div.container {
+    background-color: var(--background-color);
+}
+
+main > div.imagens {
+    backdrop-filter: blur(5px);
+    border-color: var(--background-color);
+}
+
+main > div.imagens > span {
+    color: white;
+    font-size: 1.5rem;
+}
+
+div.container > section > .section-top h1 {
+    color: var(--section-n1);
+}
+
+div.container > section > .section-top {
+    border-color: var(--section-n1);
+}
+
+div.container > section p {
+    color: var(--text-color);
+}
+
+div.container > section > .section-top button {
+    background-color: var(--background-color);
+    border-color: var(--section-n1);
+    color: var(--section-n1)
+}
+
+div.container > section:nth-child(2n) > .section-top h1 {
+    color: var(--section-n2);
+}
+
+div.container > section:nth-child(2n) > .section-top {
+    border-color: var(--section-n2);
+}
+
+div.container > section:nth-child(2n) > .section-top button {
+    border-color: var(--section-n2);
+    color: var(--section-n2)
+}

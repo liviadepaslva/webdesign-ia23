@@ -1,0 +1,88 @@
+/* cores uwu --✀------------------------------------------------------------ */
+@import url(profile.css);
+
+body {
+    background-image: url('../imgs/shadowbg2.webp');
+}
+
+header {
+    background-color: rgb(21, 15, 50);
+}
+
+header .hidden,
+header .bio {
+    background-color: rgb(21, 15, 50);
+    color: rgb(218, 234, 236);
+}
+
+nav {
+    background-color: rgb(21, 15, 50);
+}
+
+main {
+    border: .4rem rgb(21, 15, 50) solid;
+}
+
+main > div.container {
+    background-color: rgb(21, 15, 50);
+}
+
+main > div.imagens {
+    background: linear-gradient(to bottom, rgb(96, 196, 250), rgb(77, 139, 233) 50% ,rgb(68, 89, 206));
+}
+
+/*cor itens lista do nav --✀---------------------------*/
+
+nav > ul > li,
+nav > ul > li > a {
+    color: rgb(80, 166, 237);
+}
+
+nav > ul > li:hover {
+    border-color: rgb(103, 187, 255);
+}
+
+nav li > ul > li {
+    background-color: rgb(16, 15, 55);
+    border-color: rgb(80, 166, 237) ;
+    color: rgb(80, 166, 237);
+}
+
+nav li > ul > li > a {
+    color: rgb(80, 166, 237);
+}
+
+nav li > ul > li:hover {
+    background-color: rgb(80, 166, 237);
+    border-color: rgb(80, 166, 237);
+}
+
+/*cor das seções --✀---------------------------*/
+
+div.container > section > .section-top h1 {
+    color: rgb(80, 166, 237);
+}
+
+div.container > section > .section-top {
+    border-color: rgb(80, 166, 237);
+}
+
+div.container > section p {
+    color: rgb(218, 234, 236);
+}
+
+div.container > section > .section-top button {
+    background-color: rgb(80, 166, 237);
+}
+
+div.container > section:nth-child(2n) > .section-top h1 {
+    color: rgb(80, 101, 237);
+}
+
+div.container > section:nth-child(2n) > .section-top {
+    border-color: rgb(80, 101, 237);
+}
+
+div.container > section:nth-child(2n) > .section-top button {
+    background-color: rgb(78, 67, 229);
+}

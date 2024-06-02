@@ -1,0 +1,332 @@
+@import url('navbar.css');
+
+:root {
+  --vermelho: #da0f0f;
+  --azul: #006cba;
+  --branco: #ecf5f5;
+  --time-selecionado: #078dc7;
+}
+
+body {
+  background-color: #00000d;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 13, 0.85);
+  width: 100vw;
+  height: 12vh;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav{
+  width: 70%;
+}
+
+nav :is(li, a) {
+  color: var(--azul);
+}
+
+nav li > ul {
+  background-color: rgba(0, 0, 13, .9);
+  padding: .4rem;
+  border-radius: 0 0 7px 7px;
+}
+
+div.container {
+  margin-top: 12vh;
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  /* background: linear-gradient(to bottom,  black, rgb(0, 0, 13) 60%, rgb(1, 30, 52) 80%, rgb(2, 60, 96) 100%); */
+  background: linear-gradient(to bottom, rgb(0, 0, 13) , rgb(0, 0, 13) 65%,  rgb(1, 30, 52) 85%, rgb(1, 58, 93));
+  background-attachment: fixed;
+}
+
+div.container > img.imagem-fixa {
+  position: sticky;
+  top: 12vh;
+  width: 100%;
+  height: 88vh;
+}
+
+div.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+div.conteudo > section {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Silkscreen';
+  margin: 1rem 0;
+}
+
+div#trailer {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  padding: .2rem;
+  background: linear-gradient(to left, #0592c1 , #0639a0 15%, transparent 35%, transparent 65%, #043699 85%, #0592c1);
+}
+
+div#trailer > img {
+  width: 100%;
+}
+
+div#trailer button {
+  position: absolute;
+  bottom: 13%;
+  left: 8%;
+  padding: .5rem .7rem;
+  font-family: 'Silkscreen';
+  border: 3px solid #e63f02;
+  background: linear-gradient(to right, #e63f02, transparent);
+  border-radius: 10px;
+  transition: .1s linear;
+}
+
+div#trailer button:hover {
+  cursor: pointer;
+  transform: translate(10px, 0);
+  background: linear-gradient(to right, transparent, #e66502);
+  border-color: #e66502;
+}
+
+div#trailer button > a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fcfae3;
+}
+
+section > h1,
+section:nth-child(2n) > h1 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  
+}
+
+section hr {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, transparent, #0639a0 30%, #0592c1 40%, #0592c1 60%, #043699 70%, transparent);
+  border: none;
+}
+
+section > article {
+  padding: 1rem 3rem;
+  text-align: justify;
+  font-size: 1.7rem;
+  font-family: 'VT323';
+}
+
+section > :is(article, p, h1, h2) {
+  color: var(--azul);
+}
+
+/* times -------✀------------------------------------------------------------- */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 0 2rem 0;
+}
+
+div.botoes {
+  padding: 1.7rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.botoes > button {
+  padding: .6rem 1.1rem;
+  border: .2rem solid var(--time-selecionado);
+  border-radius: 30%;
+}
+
+div.botoes > button,
+div.botoes > button > a {
+  background: transparent;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+  color: var(--time-selecionado);
+  transition: .2s ease-out;
+}
+
+div.botoes > button#time-selecionado {
+  margin: 0 3rem;
+  border-radius: 15px;
+}
+
+div.botoes > button#time-selecionado > a {
+  text-decoration: none;
+}
+
+div.botoes > button:hover,
+div.botoes > button:hover > a {
+  color: var(--branco);
+  border-color: var(--branco);
+  cursor: pointer;
+}
+
+main > article {
+  margin: 0;
+  width: 45ch;
+  font-size: 1.3rem;
+  color: var(--time-selecionado);
+  font-family: 'Silkscreen', sans-serif;
+  text-align: justify;
+  transition: .2s ease-out;
+  text-align-last: center;
+}
+
+main > article::selection {
+  background-color: var(--time-selecionado);
+  color: var(--branco);
+}
+
+/* personagens -------✀------------------------------------------------------------- */
+
+div.personagens {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 350px);
+  gap: 20px;
+}
+
+div.personagens > div {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(4, 54, 153, 0.212);
+  transition: .2s;
+  border: .2rem solid;
+  border-radius: 25px;
+}
+
+div.personagens > div > img {
+  height: 70%;
+}
+
+div.personagens > div:has(img.teamdark) {
+  border-color: crimson;
+}
+
+div.personagens > div:has(img.teamdark):hover {
+  background-color: rgb(189, 18, 18);
+}
+
+div.personagens > div > button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  margin-top: 1.2rem;
+  font-size: 1.5rem;
+  padding: .3rem .5rem;
+  font-family: 'Silkscreen';
+  transition: .2s;
+  border-color: rgba(7, 105, 170, 1);
+  color: rgba(7, 105, 170, 1);
+  cursor: pointer;
+}
+
+div.personagens > div > button a {
+  color: rgba(7, 105, 170, 1);
+  text-decoration: none;
+}
+
+div.personagens > div > button:hover {
+  transform: translateY(-9px); 
+  scale: 1.1;
+}
+
+div.personagens > :last-child {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: rgba(213, 28, 179, 0.2);
+  color: palevioletred;
+}
+
+div.personagens > :last-child:hover {
+  background-color: palevioletred;
+}
+
+div.personagens > :last-child button a {
+  color: palevioletred;
+}
+
+div.personagens > :last-child:hover button a {
+  color: rgb(244, 234, 237);
+}
+
+div.personagens > div:has(img.teamdark) {
+  background-color: rgba(230, 26, 26, .2);
+}
+
+div.personagens > div:has(img.teamdark) > button {
+  border-color: rgb(230, 26, 26);
+  color: rgb(230, 26, 26);
+}
+
+div.personagens > div:has(img.teamdark) > button a {
+    color: rgb(230, 26, 26);
+}
+
+div.personagens > div:hover,
+div.personagens > div:has(img.teamdark):hover {
+  scale: .95;
+  z-index: 2;
+  border-color: white;
+}
+
+div.personagens > div:hover {
+  background-color: #157fd6;
+}
+
+div.personagens > div:has(img.teamdark):hover {
+  background-color: #ad0e0e;
+}
+
+div.personagens > div:hover > button a {
+  color: #ffffff;
+}
+
+div.personagens > div:has(img.teamdark):hover > button a {
+  color: #ffffff;
+}
+
+div.personagens > div:hover > img {
+  border-color: #ffffff;
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 30vmin;
+}

@@ -1,0 +1,67 @@
+[
+    {
+        "pergunta": "Qual é o nome da primeira zona em Sonic Adventure 2?",
+        "alternativas": ["City Escape", "Green Hill Zone", "Prison Island", "Radical Highway"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual é o nome da organização que Sonic se junta para enfrentar a ameaça alienígena em Sonic Adventure 2?",
+        "alternativas": ["Team Dark", "G.U.N.", "Team Chaotix", "Babylon Rogues"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual é a zona que apresenta um ambiente espacial e gravidade reduzida em Sonic Adventure 2?",
+        "alternativas": ["Final Rush", "Cosmic Wall", "Meteor Herd", "Mad Space"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual é o nome do chefe que Knuckles enfrenta na fase Wild Canyon em Sonic Adventure 2?",
+        "alternativas": ["Biolizard", "King Boom Boo", "Egg Golem", "Rouge the Bat"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Quantos personagens jogáveis principais estão disponíveis em Sonic Adventure 2?",
+        "alternativas": ["1", "2", "3", "4"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual é o nome da fase onde Sonic e Shadow têm seu em Sonic Adventure 2?",
+        "alternativas": ["Final Chase", "Radical Highway", "White Jungle", "Sky Rail"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Quem compôs a trilha sonora de Sonic Adventure 2?",
+        "alternativas": ["Crush 40", "Nobuo Uematsu", "Jun Senoue", "Yuzo Koshiro"],
+        "resposta": 2
+    },
+    {
+        "pergunta": "Qual é o nome da base espacial onde Shadow enfrenta Sonic em Sonic Adventure 2?",
+        "alternativas": ["Space Colony ARK", "Egg Carrier", "Meteor Base", "Starlight Station"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual é o objetivo de Rouge the Bat em Sonic Adventure 2?",
+        "alternativas": ["Salvar o mundo", "Obter as Esmeraldas do Caos", "Destruir a Space Colony ARK", "Vingar a morte de seu pai"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Qual é o nome da fase onde Eggman enfrenta Tails em Sonic Adventure 2?",
+        "alternativas": ["Egg Quarters", "Weapons Bed", "Death Chamber", "Iron Gate"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual é o nome da forma final de Sonic em Sonic Adventure 2?",
+        "alternativas": ["Dark Sonic", "Super Sonic", "Hyper Sonic", "Ultimate Sonic"],
+        "resposta": 1
+    },
+    {
+        "pergunta": "Quais são as Esmeraldas do Caos necessárias para habilitar a transformação Hyper Sonic em Sonic Adventure 2?",
+        "alternativas": ["7", "6", "8", "10"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Qual é a última fase do modo história de Sonic Adventure 2?",
+        "alternativas": ["Final Chase", "The Last World", "Final Rush", "Last Story"],
+        "resposta": 3
+    }
+]

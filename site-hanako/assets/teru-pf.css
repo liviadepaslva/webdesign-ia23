@@ -1,0 +1,77 @@
+@import url(profile.css);
+
+:root {
+    --background-color: rgb(254, 250, 241);
+    --text-color: rgb(29, 2, 2);
+    --section-break-text: rgb(24, 1, 1);
+    --section-break-bg: rgb(249, 157, 36);
+    --section-n1: rgb(94, 180, 230);
+    --section-n2: rgb(241, 105, 68);
+}
+
+body {
+    background-image: url('../imgs/teru-bg.jpg');
+}
+
+header {
+    background-color: var(--background-color);
+}
+
+header article {
+    color: var(--text-color);
+}
+
+header img.profile {
+    border-color: var(--background-color);
+}
+
+nav {
+    background-color: var(--background-color);
+}
+
+main {
+    box-sizing: border-box;
+    border: .8rem var(--background-color) solid;
+}
+
+
+main > div.container {
+    background-color: var(--background-color);
+}
+
+main > div.imagens {
+    background-color: var(--background-color);
+    border-color: var(--background-color);
+}
+
+
+div.container > section > .section-top h1 {
+    color: var(--section-n1);
+}
+
+div.container > section > .section-top {
+    border-color: var(--section-n1);
+}
+
+div.container > section p {
+    color: var(--text-color);
+}
+
+div.container > section > .section-top button {
+    background-color: var(--background-color);
+    border-color: var(--section-n1);
+    color: var(--section-n1)
+}
+
+div.container > section:nth-child(2n) > .section-top h1 {
+    color: var(--section-n2);
+}
+
+div.container > section:nth-child(2n) > .section-top {
+    border-color: var(--section-n2);
+}
+
+div.container > section:nth-child(2n) > .section-top button {
+    border-color: var(--section-n2);
+    color: var(--section-n2)
+}
